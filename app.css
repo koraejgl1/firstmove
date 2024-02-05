@@ -1,0 +1,129 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    background-image: url('Screenshot\ 2024-02-05\ at\ 10.36.32\ PM.png');
+}
+
+body.yes {
+    background-color: #ffffff;
+    background-image: url('giphy.gif');
+    background-size: cover;
+}
+
+body.yes .confirm {
+    display: block;
+}
+
+body.yes .dialog {
+    display: block;
+}
+
+.heart {
+    animation: heartbeat 1s infinite;
+    background-color: rgb(2, 2, 2);
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.heart::before {
+    top: -5px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 5px;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.25);
+    }
+    40% {
+        transform: scale(1.5);
+    }
+}
+
+.confirm {
+    min-width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f6f6f6;
+    box-shadow: 3px 3px 3px #f4f0f0;
+    border-radius: 5px;
+}
+
+.confirm_container {
+    padding: 10px;
+}
+
+.confirm_container .title {
+    color: #000000;
+    text-align: center;
+    font-size: 22px;
+}
+
+.confirm_actions {
+    display: flex;
+    column-gap: 10px;
+}
+
+.confirm_actions button {
+    width: 100%;
+    cursor: pointer;
+    font-size: 10px;
+    border: none;
+    padding: 5px;
+    color: #f1f0f0;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.confirm_actions .btn-yes {
+    background-color: #a3ddcb;
+}
+
+.confirm_actions .btn-no {
+    position: relative;
+    background-color: #e97777;
+}
+
+.dialog {
+    display: none;
+    min-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 3px 3px 3px rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+.dialog_container {
+    padding: 15px 5px;
+}
+
+.dialog_container p {
+    color: #000000;
+    text-align: center;
+}
